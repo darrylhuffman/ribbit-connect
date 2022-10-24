@@ -3,6 +3,9 @@
     "ribbit-connect-meta": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "babel-loader": "^8.2.5",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   },
