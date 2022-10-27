@@ -20,6 +20,8 @@ export default class RIBBITConnect {
         inline = false,
         settings = {},
         className,
+        environment,
+        environmentOverrideURL,
         open = false
     }){
         this.targetId = target;
@@ -33,7 +35,7 @@ export default class RIBBITConnect {
         this.curtainColor = settings.curtainColor;
         this.curtainAllowClose = settings.curtainAllowClose || true;
 
-        this.RIBBITConnectContext = new MetaRIBBITConnect({ token, settings, inline, language });
+        this.RIBBITConnectContext = new MetaRIBBITConnect({ token, settings, inline, language, environment, environmentOverrideURL });
         this.init()
     }
 

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "ribbit-connect-meta": "^1.0.0"
+    "ribbit-connect-meta": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
@@ -22,7 +22,7 @@
   },
   "keywords": [
     "ribbit",
-    "ribbit",
+    "ribbit-connect",
     "connect"
   ],
   "author": "Darryl Huffman <darryl@ribbit.ai>",

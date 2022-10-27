@@ -44,6 +44,7 @@ CONNECT.onExit(eventData => {
 })
 
 //CONNECT.onComplete(eventData => {
+//    do something with eventData
 //    console.log(eventData)
 //})
 
