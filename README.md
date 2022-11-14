@@ -1,6 +1,6 @@
 
 # ribbit-connect
-Pure JavaScript component for integrating [RIBBIT CONNECT](https://ribbit.ai/) into your webpage
+JavaScript library for integrating [RIBBIT CONNECT](https://test.RIBBIT.ai/CONNECT) into your webpage
 
 Use a JavaScript framework? Here are a few more implementation methods we provide:
 1.  [React](https://github.com/darrylhuffman/react-ribbit-connect)
@@ -30,7 +30,7 @@ Please refer to the official [RIBBIT CONNECT](https://portal.ribbit.ai/Widgets/I
 
 ## Usage
 ```js
-//import  {  RIBBITConnect  }  from  "react-ribbit-connect"; // comment out only if you used npm or yarn to install
+//import  {  RIBBITConnect  }  from  "ribbit-connect"; // comment out only if you used npm or yarn to install
 
 const CONNECT = new RIBBITConnect({
     target: 'ribbit-container', // id of any element within the </body> which you want CONNECT to initialize within
@@ -71,16 +71,16 @@ CONNECT.onExit(eventData => {
 | ```token``` | string |  | Token recieved from ```/CONNECT/session/``` endpoint
 | ```open``` | boolean | false | Whether or not CONNECT should be open or not
 | ```language``` | string | en | Optional language to be displayed to the user (Translation must be added within CONNECT settings. More coming soon.)
-| ```style``` | object |  | Optional styles to be applied to the CONNECT container
 | ```className``` | string |  | Optional class to be added to the CONNECT container
 | ```inline``` | boolean | false | Whether or not CONNECT should display inline (default is popup)
+| ```fullscreen``` | boolean | false | Whether or not CONNECT should display in full-screen mode (for native/mobile app implementation)
 | ```settings``` | object | | Additional settings (see below)
-| ```getContext``` | function |  | Can be used to get the RIBBIT CONNECT context 
 
 #### Settings
 | Name | Type | Default | Description | 
 | ------- | ----- | --------- | --------|
 | ```curtainColor``` | string |  | Color of the popup background curtain. Examples: ```#FFF``` and ```rgba(0,0,0,0.5)```
 | ```curtainAllowClose``` | boolean | true | Whether or not the user clicking on the popup background curtain should close the CONNECT popup
+| ```closeButton``` | boolean | false | Whether a close button should display in the top right corner of the widget. (on click fires the onExit method)
 
 

@@ -33,7 +33,7 @@ const stylesheet = `
     position: relative;
     z-index: 2;
 }
-.RIBBIT-popup .RIBBIT-iFrame.mobile {
+.RIBBIT-popup .RIBBIT-iFrame.RIBBIT-iFrame-mobile {
     width: 100% !important;
     height: 98% !important;
     bottom: 0px;
@@ -43,6 +43,12 @@ const stylesheet = `
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: 0 -2px 10px #000;
+}
+.RIBBIT-popup .RIBBIT-iFrame-fullscreen.RIBBIT-iFrame-fullscreen {
+    width: 100%;
+    height: 100% !important;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 .RIBBIT-popup .RIBBIT-popup-curtain {
     position: absolute;

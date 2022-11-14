@@ -18,6 +18,7 @@ export default class RIBBITConnect {
         token,
         language,
         inline = false,
+        fullscreen = false,
         settings = {},
         className,
         environment,
@@ -35,7 +36,7 @@ export default class RIBBITConnect {
         this.curtainColor = settings.curtainColor;
         this.curtainAllowClose = settings.curtainAllowClose || true;
 
-        this.RIBBITConnectContext = new MetaRIBBITConnect({ token, settings, inline, language, environment, environmentOverrideURL });
+        this.RIBBITConnectContext = new MetaRIBBITConnect({ token, settings, inline, fullscreen, language, environment, environmentOverrideURL });
         this.init()
     }
 

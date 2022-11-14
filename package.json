@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/darrylhuffman/ribbit-connect.git"
+    "url": "git+https://github.com/RIBBITai/ribbit-connect.git"
   },
   "keywords": [
     "ribbit",
@@ -28,7 +28,7 @@
   "author": "Darryl Huffman <darryl@ribbit.ai>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/darrylhuffman/ribbit-connect/issues"
+    "url": "https://github.com/RIBBITai/ribbit-connect/issues"
   },
-  "homepage": "https://github.com/darrylhuffman/ribbit-connect#readme"
+  "homepage": "https://github.com/RIBBITai/ribbit-connect#readme"
 }
