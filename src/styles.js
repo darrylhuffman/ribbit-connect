@@ -36,6 +36,8 @@ const stylesheet = `
 .RIBBIT-popup .RIBBIT-iFrame.RIBBIT-iFrame-mobile {
     width: 100% !important;
     height: 98% !important;
+    max-width: none !important;
+    max-height: none !important;
     bottom: 0px;
     position: absolute;
     border-top-left-radius: 10px;
@@ -47,6 +49,8 @@ const stylesheet = `
 .RIBBIT-popup .RIBBIT-iFrame-fullscreen.RIBBIT-iFrame-fullscreen {
     width: 100%;
     height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
