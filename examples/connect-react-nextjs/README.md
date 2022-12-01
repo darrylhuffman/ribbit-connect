@@ -2,7 +2,13 @@ This is the RIBBIT CONNECT [Next.js](https://nextjs.org/) demo project. This dem
 
 ## Getting Started
 
-First, run an install of the package:
+First, navigate to this folder via your terminal:
+
+```bash
+cd examples/connect-react-nextjs
+```
+
+Then, run an install of the package:
 
 ```bash
 npm install
@@ -10,7 +16,7 @@ npm install
 yarn install
 ```
 
-Then, run the development server:
+Lastly, run the development server:
 
 ```bash
 npm run dev

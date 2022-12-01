@@ -9,6 +9,7 @@ export default function CONNECT(){
         <RIBBITConnect 
             token={router.query.token}
             environment={router.query.env}
+            onComplete={eventData => { console.log('complete', eventData) }}
         />
     )
 }
