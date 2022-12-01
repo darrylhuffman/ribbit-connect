@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECT Vanilla Demo</title>
+    <style>
+        html, body { height: 100%; padding: 0; margin: 0; }
+        #ribbit { height: 100%; display: flex; }
+
+        .error {
+            margin: auto;
+            max-width: 60%;
+            color: rgba(0,0,0,.75);
+            font-size: 1.5rem;
+            font-family: Lato,Helvetica Neue,Helvetica,sans-serif;
+            line-height: 1.5;
+            max-width: 700px;
+        }
+
+        .variable {
+            background-color: rgba(0,0,0,.05);
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0 5px;
+        }
+
+        .sm {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="ribbit"></div>
+
+    <script src="https://cfsclientcdn01.blob.core.windows.net/widgets/v4/ribbit-connect.min.js"></script> 
+    <script>
+        var token = ''
+        var environment = 'Test' // Test or Production
+
+        if(!token){
+            document.getElementById('ribbit').innerHTML = '<p class="error">Please update the source code of this HTML file and update the <span class="variable">token</span> variable to a valid CONNECT session token.<br/><br/><span class="sm">Please refer to the CONNECT documentation on how to receive a CONNECT session token.</span></p>'
+        }
+        else {
+            var CONNECT = new RIBBITConnect({
+                target: 'ribbit', // id of any element within the </body> which you want CONNECT to initialize within
+                token: token, // see documentation on how to get a token
+                environment: environment,
+                fullscreen: false,
+                settings: {
+                    closeButton: false
+                }
+            })
+            CONNECT.open();
+            CONNECT.onExit((eventData) => {
+                const message = { type: 'EXIT', eventData}
+                console.log({message})
+                //window.ReactNativeWebView.postMessage(JSON.stringify(eventData))
+                CONNECT.close();
+            })
+            CONNECT.onComplete((eventData) => {
+                const message = { type: 'COMPLETE', eventData}
+                console.log(eventData)
+                //window.ReactNativeWebView.postMessage(JSON.stringify(eventData))
+            })
+            CONNECT.onLaunch((eventData) => {
+                const message = { type: 'ON_LAUNCH', eventData}
+                console.log({message})
+                //window.ReactNativeWebView.postMessage(JSON.stringify(eventData))
+            })
+        }
+</script>
+</body>
+</html>
